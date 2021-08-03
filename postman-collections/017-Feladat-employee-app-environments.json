@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "d2b4add1-b977-42e7-8e8d-ef69d266717e",
+		"name": "employee collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teszt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobdescriptions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/jobdescriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"jobdescriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobdescriptions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"janitor\",\r\n  \"description\": \"janitor\",\r\n  \"addedAt\": \"2021-08-02T16:14:34.241Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/jobdescriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"jobdescriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlEmp}}",
+					"host": [
+						"{{urlEmp}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{{bodyEmp}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlEmp}}",
+					"host": [
+						"{{urlEmp}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"teva\",\r\n  \"jobDescriptionId\": 1,\r\n  \"firstName\": \"Éva\",\r\n  \"lastName\": \"Trener\",\r\n  \"middleName\": \"_\",\r\n  \"emailId\": \"tvica@example.com\",\r\n  \"dayOfBirth\": \"2001-08-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlEmp}}",
+					"host": [
+						"{{urlEmp}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees_id2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"teva\",\r\n  \"jobDescriptionId\": 1,\r\n  \"firstName\": \"Éva\",\r\n  \"lastName\": \"Takacs\",\r\n  \"middleName\": \"_\",\r\n  \"emailId\": \"tvica@example.com\",\r\n  \"dayOfBirth\": \"2001-08-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlEmp}}/2",
+					"host": [
+						"{{urlEmp}}"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees_id2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{urlEmp}}/2",
+					"host": [
+						"{{urlEmp}}"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{PasswordEmp}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{UsernameEmp}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
